@@ -1,4 +1,5 @@
 # image-generator
+Image generator with sharp lib
 
 ## Development
 
