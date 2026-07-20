@@ -24,7 +24,7 @@ class ImageService {
 //         const text = `Pedro
 // Bento aps`;
 
-        const text = `Pedro`;
+        const text = `PedroB`;
 
         const lines = text.split('\n');
 
