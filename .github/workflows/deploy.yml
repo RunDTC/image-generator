@@ -50,4 +50,6 @@ jobs:
             --image=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${{ github.sha }} \
             --region=${{ env.REGION }} \
             --allow-unauthenticated \
+            --set-env-vars=SHOPIFY_SHOP_DOMAIN=coca-cola-store-dev-rundtc.myshopify.com,SHOPIFY_API_VERSION=2026-07 \
+            --set-secrets=SHOPIFY_ADMIN_API_TOKEN=shopify-admin-api-token:latest \
             --quiet
