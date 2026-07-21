@@ -7,6 +7,9 @@ class ImageController {
 
         try {
 
+            console.log("Test log: Generating image preview...");
+
+
             const image = await imageService.generate();
 
             res.setHeader('Content-Type', 'image/jpeg');
@@ -27,6 +30,10 @@ class ImageController {
 
         }
 
+    }
+
+    public async getVersion(req: Request, res: Response): Promise<void> {
+        res.send('v1');
     }
 
 }
