@@ -7,7 +7,7 @@ class ImageController {
 
         try {
 
-            console.log("Test log: Generating image preview...");
+            console.log("Test log preview: Generating image preview...");
 
 
             const image = await imageService.generate();
