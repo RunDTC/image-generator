@@ -9,6 +9,8 @@ export interface PersonalizationConfig {
     width: number;
     height: number;
     maxFontSize: number;
+    strokeColor?: string;
+    strokeWidth?: number;
 }
 
 // Background image
@@ -44,11 +46,15 @@ const personalization: { default: PersonalizationConfig } = {
             'you-webfont.ttf'
         ),
 
-        color: '#FFFFFF',
+        color: '#6641be',
+
+        strokeColor: '#FFFFFF',
+
+        strokeWidth: 12,
 
         x: 470,
 
-        y: 770,
+        y: 900,
 
         width: 637,
 

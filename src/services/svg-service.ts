@@ -17,6 +17,8 @@ interface RenderOptions {
     height: number;
     imageWidth: number;
     imageHeight: number;
+    strokeColor?: string;
+    strokeWidth?: number;
 }
 
 class SvgService {
@@ -77,10 +79,18 @@ class SvgService {
                 metric.fontSize
             );
 
+            const strokeAttributes = options.strokeWidth
+                ? `
+        paint-order="stroke fill"
+        stroke="${options.strokeColor ?? '#FFFFFF'}"
+        stroke-width="${options.strokeWidth}"
+        stroke-linejoin="round"`
+                : '';
+
             paths += `
     <path
         d="${centeredPath.toPathData(3)}"
-        fill="${options.color}" />`;
+        fill="${options.color}"${strokeAttributes} />`;
 
         }
 

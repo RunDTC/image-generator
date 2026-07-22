@@ -24,7 +24,7 @@ class ImageService {
 //         const text = `Pedro
 // Bento aps`;
 
-        const text = `PedroB`;
+        const text = `PedroC`;
 
         const lines = text.split('\n');
 
@@ -47,6 +47,8 @@ class ImageService {
             metrics,
             fontFile: config.fontFile,
             color: config.color,
+            strokeColor: config.strokeColor,
+            strokeWidth: config.strokeWidth,
             x: config.x,
             y: config.y,
             width: config.width,
